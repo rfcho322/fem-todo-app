@@ -54,6 +54,7 @@ input.addEventListener("keydown", function(event) {
 
 // DRAG TO REORDER AND SAVE NEWLY REORDERED LIST
 const sortable = new Sortable(list, {
+    swapThreshold: 0.40,
     animation: 150,
     filter: '.filtered',
     onEnd: function(evt) {

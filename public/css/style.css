@@ -82,7 +82,7 @@ a {
     text-decoration: none;
 }
 
-p, button {
+p, button, ::placeholder {
     color: var(--default-text-color); /* default <p> color */
 }
 
