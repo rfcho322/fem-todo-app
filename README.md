@@ -6,7 +6,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -32,9 +32,20 @@ Users should be able to:
 - &#9989; **Bonus**: Drag and drop to reorder items on the list
 - &#11036; **Bonus**: Build this project as a full-stack application (**SOON** check here [Continued development](#continued-development))
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+<p align="center">
+  <strong>Desktop</strong>
+</p>
+<p align="center">
+  <img src="public/images/ss-desktop.png"/>
+</p>
+<p align="center">
+  <strong>Mobile</strong>
+</p>
+<p align="center">
+  <img src="public/images/ss-mobile.png"/>
+</p>
 
 ### Links
 
@@ -53,7 +64,7 @@ Users should be able to:
 
 ### What I learned
 
-There's a particular part of my css that does a border color with gradients as you hover on an unticked checkbox, and I'm trying to work it exactly as the design provided by Frontend Mentor, it is a bit tricky as I'm not yet familiar with linear and radial gradients but I somehow achieved it. If you're reading this and not able to achieve it, Check the code snippet below &#128513; &#128513;
+There's a particular part of my css that applies a border gradient color as you hover on an unticked checkbox, and I'm trying to work it exactly as the design provided by Frontend Mentor, it is a bit tricky as I'm not yet familiar with linear and radial gradients but I somehow achieved it. If you're reading this and not able to achieve it, Check the code snippet below &#128513; &#128513;
 
 ```css
 .round-checkbox input[type="checkbox"]:not(:checked) + label:hover {
