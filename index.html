@@ -15,7 +15,7 @@
 </head>
 <body class="">
   <!-- CONTENT -->
-  <div class="container-fluid">
+  <main class="container-fluid">
     <div class="hero">
       <img src="public/images/bg-mobile-dark.jpg" alt="Hero image">
     </div>
@@ -32,8 +32,9 @@
             <div class="round-checkbox">
               <form class="addTodoForm">
                 <input type="checkbox" id="createCheckBox"/>
-                <label for="createCheckBox"></label>
-                <input type="text" class="addTodo" value="Create new Todo">
+                <label for="createCheckBox" class="checkbox-label"></label>
+                <input type="text" id="addTodo" class="addTodo" value="Create new Todo">
+                <label for="addTodo"></label>
               </form>
             </div>
           </div>
@@ -76,15 +77,15 @@
 
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <footer class="footer">
     <div class="footer-items">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/rfcho322" target="_blank">rfcho322</a>.
     </div>
-  </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
   <script src="public/js/scripts.js"></script>
 </body>

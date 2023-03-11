@@ -203,7 +203,7 @@ function todoList (filteredItems, filtered) {
         newItem.className = `list-items todo ${filtered === 'filtered' ? 'filtered' : ''} ${todo.completed === true ? 'completed' : 'active'}`;
         newItem.innerHTML = `<div class="round-checkbox">
             <input type="checkbox" class="checkbox" id="${todo.id}" ${todo.completed === true ? 'checked' : ''}/>
-            <label for="${todo.id}"></label>
+            <label for="${todo.id}" class="checkbox-label"></label>
             <p class="list-items_item">${todo.todo}</p>
             </div>
             <a href="javascript:void(0)" role="button" class="btn-delete" data-delete-id="${todo.id}"></a>`;
