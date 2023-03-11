@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Todo App](https://github.com/rfcho322/fem-todo-app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Frontend Mentor solution URL: [Todo App Solution](https://www.frontendmentor.io/solutions/a-drag-and-drop-todo-app-HQMrC2t1Uz)
+- Live Site URL: [Todo App Live Website](https://rfcho322.github.io/fem-todo-app/)
 
 ## My process
 
