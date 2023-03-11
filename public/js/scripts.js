@@ -127,8 +127,8 @@ function getTodoList () {
     is_todoChecked(todos, getTodoList);
 
     // TOTAL NUMBER OF ITEMS, INCREASES EACH ADD, DECREASES EACH DELETE
-    const count_items = document.querySelectorAll('.list-items.todo').length;
-    total_items.innerHTML = `${count_items} item${count_items !== 1 ? 's' : ''} left`;
+    // const count_items = document.querySelectorAll('.list-items.todo').length;
+    // total_items.innerHTML = `${count_items} item${count_items !== 1 ? 's' : ''} left`;
 
     // FILTER BUTTONS
     const btn_all = document.querySelectorAll(".btnAll");
@@ -196,6 +196,7 @@ function todoList (filteredItems, filtered) {
     list.innerHTML = '';
     total_items.innerHTML = '';
     num_of_items = 0;
+    const items_left = [];
 
     filteredItems.forEach( todo => {  
         num_of_items++;
@@ -208,9 +209,13 @@ function todoList (filteredItems, filtered) {
             </div>
             <a href="javascript:void(0)" role="button" class="btn-delete" data-delete-id="${todo.id}"></a>`;
         list.appendChild(newItem);
+
+        if(!todo.completed) {
+            items_left.push(todo.completed);
+        }
     });
     // TOTAL NUMBER OF ITEMS, INCREASES EACH ADD, DECREASES EACH DELETE
-    total_items.innerHTML = `${filteredItems.length} item${filteredItems.length !== 1 ? 's' : ''} left`;
+    total_items.innerHTML = `${items_left.length} item${items_left.length !== 1 ? 's' : ''} left`;
 
 }
 
@@ -306,9 +311,22 @@ function clearCompleted () {
         // IF STATEMENT IS TRUE REMOVE AN ELEMENT AND UPDATE THE NUMBER OF ITEMS
         if(completedEl) {
             element.remove();
-            total_items.innerHTML = '';
-            const count_items = document.querySelectorAll('.list-items.todo').length;
-            total_items.innerHTML = `${count_items} item${count_items !== 1 ? 's' : ''} left`;
+            // WHEN DELETED ALL COMPLETED TODOS, UPDATES LIST BASED ON CURRENT ACTIVE PAGE
+            const listfilter = document.querySelectorAll('.list-items_filter a');
+            listfilter.forEach(lf => {
+                const btnAll = lf.classList.contains('btnAll') && lf.classList.contains('active');
+                const btnActive = lf.classList.contains('btnActive') && lf.classList.contains('active');
+                const btnCompleted = lf.classList.contains('btnCompleted') && lf.classList.contains('active');
+                if (btnActive) {
+                    getActive();
+                }
+                if (btnCompleted) {
+                    getCompleted();
+                }
+                if (btnAll) {
+                    getTodoList();
+                }
+            });
         }
     });
 }

@@ -366,13 +366,16 @@ input[type="text"]:focus {
 /* Media Queries */
 
 @media (min-width: 376px) {
-    .hero img {
-        width: 100%;
-        content: var(--hero-image-desktop);
-    }
     .card-footer, .list-items {
         padding-inline: 1.5rem;
         padding-block: 1rem;
+    }
+}
+
+@media (min-width: 426px) {
+    .hero img{
+        height: 250px;
+        background-size: cover;
     }
 }
 
@@ -391,6 +394,10 @@ input[type="text"]:focus {
     .row {
         width: 700px;
         padding-top: 8rem;
+    }
+    .hero img {
+        width: 100%;
+        content: var(--hero-image-desktop);
     }
     .card-visibility {
         display: none;
