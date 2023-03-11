@@ -6,7 +6,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -32,9 +32,15 @@ Users should be able to:
 - &#9989; **Bonus**: Drag and drop to reorder items on the list
 - &#11036; **Bonus**: Build this project as a full-stack application (**SOON** check here [Continued development](#continued-development))
 
-### Screenshot
+### Screenshots
+<p align="center">
+  <img src="public/images/ss-desktop.png" width="50%"/>
+  <img src="public/images/ss-mobile.png" width="50%"/>
+</p>
 
-![](./screenshot.jpg)
+<p align="center">
+[Desktop Dark mode](public/images/ss-desktop-darkmode.png)
+</p>
 
 ### Links
 
