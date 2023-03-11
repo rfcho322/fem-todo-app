@@ -33,13 +33,18 @@ Users should be able to:
 - &#11036; **Bonus**: Build this project as a full-stack application (**SOON** check here [Continued development](#continued-development))
 
 ### Screenshots
-<p align="center">
-  <img src="public/images/ss-desktop.png" width="50%"/>
-  <img src="public/images/ss-mobile.png" width="50%"/>
-</p>
 
 <p align="center">
-[Desktop Dark mode](public/images/ss-desktop-darkmode.png)
+  <strong>Desktop</strong>
+</p>
+<p align="center">
+  <img src="public/images/ss-desktop.png"/>
+</p>
+<p align="center">
+  <strong>Mobile</strong>
+</p>
+<p align="center">
+  <img src="public/images/ss-mobile.png"/>
 </p>
 
 ### Links
