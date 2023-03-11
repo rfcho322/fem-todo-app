@@ -356,6 +356,10 @@ input[type="text"]:focus {
 }
 
 .footer a { 
+    color: var(--clr-dark-neutral-200); 
+}
+
+.footer a:focus, .footer a:hover { 
     color: var(--clr-primary); 
 }
 

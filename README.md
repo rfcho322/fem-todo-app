@@ -56,7 +56,7 @@ Users should be able to:
 
 ### Built with
 
-- HTML5
+- Semantic HTML5 markup
 - CSS
 - Vanilla JS
 - Flexbox
@@ -67,7 +67,7 @@ Users should be able to:
 There's a particular part of my css that applies a border gradient color as you hover on an unticked checkbox, and I'm trying to work it exactly as the design provided by Frontend Mentor, it is a bit tricky as I'm not yet familiar with linear and radial gradients but I somehow achieved it. If you're reading this and not able to achieve it, Check the code snippet below &#128513; &#128513;
 
 ```css
-.round-checkbox input[type="checkbox"]:not(:checked) + label:hover {
+.round-checkbox input[type="checkbox"]:not(:checked) + .checkbox-label:hover {
   border: 1px solid transparent;
   background-image: linear-gradient(var(--foreground), var(--foreground)), radial-gradient(circle at top left,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   background-origin: border-box;
