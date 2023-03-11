@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Todo App Solution](https://www.frontendmentor.io/solutions/a-drag-and-drop-todo-app-HQMrC2t1Uz)
+- Live Site URL: [Todo App Website](https://rfcho322.github.io/fem-todo-app/)
 
 ## My process
 
@@ -64,7 +64,7 @@ Users should be able to:
 
 ### What I learned
 
-There's a particular part of my css that does a border color with gradients as you hover on an unticked checkbox, and I'm trying to work it exactly as the design provided by Frontend Mentor, it is a bit tricky as I'm not yet familiar with linear and radial gradients but I somehow achieved it. If you're reading this and not able to achieve it, Check the code snippet below &#128513; &#128513;
+There's a particular part of my css that applies a border gradient color as you hover on an unticked checkbox, and I'm trying to work it exactly as the design provided by Frontend Mentor, it is a bit tricky as I'm not yet familiar with linear and radial gradients but I somehow achieved it. If you're reading this and not able to achieve it, Check the code snippet below &#128513; &#128513;
 
 ```css
 .round-checkbox input[type="checkbox"]:not(:checked) + label:hover {
