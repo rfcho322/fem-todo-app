@@ -36,6 +36,7 @@ input.addEventListener("keydown", event => {
         createTodo();
         input.value = '';
         checkbox.checked = false;
+        input.focus();
     }
   }
 });
@@ -46,6 +47,7 @@ checkbox.addEventListener("click", function(event) {
         createTodo();
         input.value = '';
         checkbox.checked = false;
+        input.focus();
     }
 });
 
