@@ -62,6 +62,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: var(--background);
+    transition: background-color 0.2s ease-out;
 }
 img, picture, video, canvas, svg {
     display: block;
@@ -140,12 +141,9 @@ input[type="text"]:focus {
 /* Card */
 
 .card {
-    /* position: absolute;
-    top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); set this to query media */
     border-radius: 6px;
     background-color: var(--foreground);
+    transition: background-color 0.2s ease-out;
 }
 
 .card-footer {
@@ -154,6 +152,7 @@ input[type="text"]:focus {
     padding-inline: 0.9375rem;
     padding-block: 0.9375rem;
     border-top: 1px solid var(--default-border-color);
+    transition: border-top 0.2s ease-out;
 }
 
 .card-footer a {
@@ -201,6 +200,10 @@ input[type="text"]:focus {
     background-repeat: no-repeat;
 }
 
+.toggle-theme:hover {
+    opacity: 0.5;
+}
+
 /* List Items */
 
 .list-items {
@@ -210,15 +213,12 @@ input[type="text"]:focus {
     border-bottom: 1px solid var(--default-border-color);
     padding-inline: 0.9375rem;
     padding-block: 0.9375rem;
+    transition: border-bottom 0.2s ease-out;
 }
 
 .list-items:hover:where(.list-items:has(.btn-delete)) {
     cursor: pointer;
 }
-
-/* .list-items:hover .btn-delete {
-    display: block;
-} Add this to media query when it goes beyond 372px*/
 
 .list-items p {
     margin-inline-start: 1.125rem;
@@ -273,6 +273,7 @@ input[type="text"]:focus {
     position: absolute;
     top: 0;
     width: 20px;
+    transition: background-color 0.2s ease-out, border 0.2s ease-out;
 }
 
 .round-checkbox input[type="checkbox"]:not(:checked) + .checkbox-label:hover {
@@ -356,7 +357,7 @@ input[type="text"]:focus {
 }
 
 .footer a { 
-    color: var(--clr-dark-neutral-200); 
+    color: var(--text-color-200); 
 }
 
 .footer a:focus, .footer a:hover { 
@@ -377,6 +378,14 @@ input[type="text"]:focus {
         height: 250px;
         background-size: cover;
     }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .row {
+        max-width: 550px;
+        flex-grow: 1;
+    }
 }
 
 @media (min-width: 768px) {
@@ -389,15 +398,17 @@ input[type="text"]:focus {
     .wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     .row {
-        width: 700px;
+        max-width: 700px;
         padding-top: 8rem;
+        flex-grow: 1;
+        transition: all 0.2s ease;
     }
     .hero img {
         width: 100%;
         content: var(--hero-image-desktop);
+        transition: content 0.2s linear;
     }
     .card-visibility {
         display: none;
