@@ -18,6 +18,7 @@ toggle_theme.addEventListener('click', () => {
 });
 
 // CRUD USING LOCALSTORAGE
+const form = document.querySelector(".addTodoForm");
 const input = document.querySelector(".addTodo");
 const checkbox = document.querySelector("#createCheckBox");
 const list = document.querySelector('.list');
@@ -27,34 +28,30 @@ let num_of_items = 0;
 // INITIALIZE TODO LIST
 getTodoList();
 
-// ADD TODO
-input.addEventListener("keydown", function(event) {
-  const todos = JSON.parse(localStorage.getItem('todoList')) || [];
+// ADD TODO ON ENTER
+input.addEventListener("keydown", event => {
   if (event.keyCode === 13) {
     event.preventDefault(); // PREVENT DEFAULT "ENTER" KEY BEHAVIOR
-
-    const btn_active = document.querySelector(".btnActive");
-    const btn_completed = document.querySelector(".btnCompleted");
-    const is_btnActive = btn_active.classList.contains('active');
-    const is_btnCompleted = btn_completed.classList.contains('active');
-
-    if((is_btnActive && checkbox.checked === false) || (is_btnCompleted && checkbox.checked === false)) {
-        createTodo (todos, false, getActive);
-    } else if ((is_btnCompleted && checkbox.checked === true) || (is_btnActive && checkbox.checked === true)) {
-        createTodo (todos, true, getCompleted);
-    } else {
-        if(checkbox.checked) {
-            createTodo (todos, true, getTodoList);
-        } else {
-            createTodo (todos, false, getTodoList);
-        }
+    if (input.value.trim() !== '') {
+        createTodo();
+        input.value = '';
+        checkbox.checked = false;
     }
   }
 });
 
+checkbox.addEventListener("click", function(event) {
+    checkbox.checked = false;
+    if (input.value.trim() !== '') {
+        createTodo();
+        input.value = '';
+        checkbox.checked = false;
+    }
+});
+
 // DRAG TO REORDER AND SAVE NEWLY REORDERED LIST
 const sortable = new Sortable(list, {
-    swapThreshold: 0.40,
+    delay: 100, //ADDED DELAY, SO IT WILL TURN OUT AS CLICK AND DRAG
     animation: 150,
     filter: '.filtered',
     onEnd: function(evt) {
@@ -157,7 +154,28 @@ function getTodoList () {
 }
 
 // CREATE TODO LIST
-function createTodo (todoList, is_completed, updateList) {
+function createTodo () {
+    const todos = JSON.parse(localStorage.getItem('todoList')) || [];
+    const btn_active = document.querySelector(".btnActive");
+    const btn_completed = document.querySelector(".btnCompleted");
+    const is_btnActive = btn_active.classList.contains('active');
+    const is_btnCompleted = btn_completed.classList.contains('active');
+
+    if((is_btnActive && checkbox.checked === false) || (is_btnCompleted && checkbox.checked === false)) {
+        saveTodo (todos, false, getActive);
+    } else if ((is_btnCompleted && checkbox.checked === true) || (is_btnActive && checkbox.checked === true)) {
+        saveTodo (todos, true, getCompleted);
+    } else {
+        if(checkbox.checked) {
+            saveTodo (todos, true, getTodoList);
+        } else {
+            saveTodo (todos, false, getTodoList);
+        }
+    }
+}
+
+// SAVE TODO LIST
+function saveTodo (todoList, is_completed, updateList) {
     todoList.push({
         id: Date.now(),
         todo: input.value,
